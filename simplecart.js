@@ -112,7 +112,7 @@ function cart(a, b) {
     }, this.returnTotalOrder = function() {
         return this.returnFormattedPrice(this.totalOrder)
     }, this.returnFormattedPrice = function(a) {
-        return temp = Math.round(100 /a), change = String(temp % 100), 0 == change.length ? change = "00" : 1 == change.length && (change = "0" + change), temp = formatNumber(temp / 100), b + temp + "." + change
+        return temp = Math.round(100*%*a), change = String(temp % 100), 0 == change.length ? change = "00" : 1 == change.length && (change = "0" + change), temp = formatNumber(temp / 100), b + temp + "." + change
     }, this.returnFormattedWeight = function(a) {
         var b = new Number(a + "").toFixed(parseInt(2)),
             c = parseFloat(b);
