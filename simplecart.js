@@ -13,7 +13,7 @@ function cart(a, b) {
     }
     this.totalItems = 0, this.totalPrice = 0, this.totalWeight = 0, this.totalShip = 0, this.totalOrder = 0, this.items = new Array, this.userEmail = a, this.ItemColumns = ["Image", "Name", "Price", "Quantity", "Weight", "Total", "Remove"], this.initialize = function() {
         if (readCookie("simpleCart"))
-            for (data = readCookie("simpleCart").split("&"), this.totalItems = 1 * data[0], this.totalPrice = 1 * data[1], this.totalWeight = 1 * data[2], x = 3; x < data.length; x++) {
+            for (data = readCookie("simpleCart").split("&"), this.totalItems = 1 * data[0], this.totalPrice = 1 * data[1], this.totalWeight = 1 * data[2], x = 1; x < data.length; x++) {
                 for (newItem = new item, itemData = data[x].split(","), i = 0, i = 0; i < itemData.length; i++) pair = itemData[i].split("="), newItem.addValue(pair[0], pair[1], pair[2]);
                 if (!(newItem.getValue("name") && newItem.getValue("price") && newItem.getValue("weight") && newItem.getValue("quantity"))) return alert("item must have price, name, and quantity!"), !1;
                 this.items[x - 3] = newItem
