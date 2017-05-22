@@ -1,5 +1,5 @@
 function formatNumber(a) {
-    for (var a = a.toFixed(2) + "", b = a.split("."), c = b[0], d = /(\d+)(\d{3})/; d.test(c);) c = c.replace(d, "$1,$2");
+    for (var a = a.toFixed(1) + "", b = a.split("."), c = b[0], d = /(\d+)(\d{3})/; d.test(c);) c = c.replace(d, "$1,$2");
     return c
 }
 
@@ -114,7 +114,7 @@ function cart(a, b) {
     }, this.returnFormattedPrice = function(a) {
         return temp = Math.round(100 *a), change = String(temp % 100), 0 == change.length ? change = "00" : 1 == change.length && (change = "0" + change), temp = formatNumber(temp / 100), b + temp + "." + change
     }, this.returnFormattedWeight = function(a) {
-        var b = new Number(a + "").toFixed(parseInt(2)),
+        var b = new Number(a + "").toFixed(parseInt(1)),
             c = parseFloat(b);
         return c
     }, this.updateQuantity = function() {
