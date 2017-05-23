@@ -3630,4 +3630,15 @@ $(_s7GdK[2282]).on(_s7GdK[2283], function() {
     }
 });
 //]]>
+</script>
+//<![CDATA[
+jQuery('a').each(function() {
+// Let's make external links open in a new window.
+var href = jQuery(this).attr('href');
 
+if (typeof href != 'undefined' && href != "" && (href.indexOf('http://') != -1 || href.indexOf('https://') != -1) && href.indexOf(window.location.hostname) == -1) {
+jQuery(this).attr("target", "_blank");
+}
+});
+//]]>
+</script>
